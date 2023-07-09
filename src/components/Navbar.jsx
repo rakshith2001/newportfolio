@@ -1,22 +1,22 @@
 import React,{ useState } from 'react'
 import { FaBars,FaTimes ,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
-import {GrResume} from 'react-icons/gr'
+
 import {Link} from 'react-scroll'
-import { MdDarkMode } from 'react-icons/md';
 
 const Navbar = () => {
   
   const [nav,setNav] = useState(false);
 
-  const [darkMode,setDarkMode] = useState(false);
+
+
   
 
   const onHandleClick = () => {
     setNav(!nav);
   }
   return (
-    <div className={darkMode ? 'dark' : ''}>
+   
     <div className='fixed w-full bg-[#0b0c10] h-[80px] flex justify-between items-center px-4 text-[#66fcf1]'>
       <div className='text-2xl'>
         <div>RAKSHITH</div>
@@ -62,28 +62,25 @@ const Navbar = () => {
       {/** Hamburger items**/}
       <ul className={!nav ?'hidden': 'absolute   top-0 left-0 w-full h-screen bg-[#0b0c10] flex flex-col justify-center items-center '}>
           <li className='py-6 text-4xl'>
-          <Link onClick={onHandleClick} to="home"  smooth={true}  duration={500} >
-            Home
-          </Link>
+          <a a href='https://twitter.com/familyneedlove' target="_blank"  rel="noreferrer">
+            Twitter
+          </a>
+          </li>
 
+          <li className='py-6 text-4xl'>
+          <a a href='https://github.com/rakshith2001' target="_blank"  rel="noreferrer">
+            Github
+          </a>
           </li>
           <li className='py-6 text-4xl'>
-          {' '}
-          <Link onClick={onHandleClick} to="about"  smooth={true}  duration={500} >
-            About
-          </Link>
+          <a a href='https://www.linkedin.com/in/rakshith-r-3a98aa187' target="_blank"  rel="noreferrer">
+            LinkedIn
+          </a>
           </li>
           <li className='py-6 text-4xl'>
-          {' '}
-          <Link onClick={onHandleClick}  to="work"  smooth={true}  duration={500} >
-            Work
-          </Link>
-          </li>
-          <li className='py-6 text-4xl'>
-          {' '}
-          <Link onClick={onHandleClick} to="contact"  smooth={true}  duration={500} >
-            Contact
-          </Link>
+          <a a href='https://drive.google.com/file/d/10UXA4Q11sNPG3_vjcm6c7-E08fJ627A7/view?usp=sharing' target="_blank"  rel="noreferrer">
+            Resume
+          </a>
           </li>
         </ul>
 
@@ -103,20 +100,14 @@ const Navbar = () => {
         </li>
 
         <li className='w-[150px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#1f2833]'>
-          <a href='/' className='flex justify-between items-center w-full '>
+          <a href='https://www.linkedin.com/in/rakshith-r-3a98aa187' className='flex justify-between items-center w-full '>
             LinkedIn <FaLinkedin size={30} style={{color:"#0072b1"}}/>
           </a>
         </li>
 
         <li className='w-[150px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#1f2833]'>
-          <a href='/' className='flex justify-between items-center w-full '>
-            Email <HiOutlineMail size={30}/>
-          </a>
-        </li>
-
-        <li className='w-[150px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#1f2833]'>
-          <a href='/' className='flex justify-between items-center w-full '>
-            Resume < GrResume size={30}/>
+        <a href='https://drive.google.com/file/d/10UXA4Q11sNPG3_vjcm6c7-E08fJ627A7/view?usp=sharing' className='flex justify-between items-center w-full '>
+            Resume <HiOutlineMail size={30}/>
           </a>
         </li>
       </ul>
@@ -129,7 +120,7 @@ const Navbar = () => {
 
     </div>
 
-    </div>
+
     
   )
 }
