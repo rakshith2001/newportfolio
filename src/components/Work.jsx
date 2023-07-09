@@ -43,7 +43,7 @@ const Work = () => {
                             </span>
                             <div className='pt-8 text-center'>
 
-                            <a href='https://github.com/rakshith2001/newsapp'>
+                            <a href='https://github.com/rakshith2001/newsapi'>
                                 <button className='text-center rounded-lg  px-4 py-3m-2 bg-white text-gray-700s font-bold text-lg'>Code</button>
                             </a>
 
