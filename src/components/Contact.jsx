@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({dark}) => {
   return (
-    <div className='w-full h-[710px] py-10 bg-[#0b0c10]  flex justify-center' name='contact'>
+    <div className={dark?'w-full h-[710px] py-10 bg-[#ffffff]  flex justify-center':'w-full h-[710px] py-10 bg-[#0b0c10]  flex justify-center'} name='contact'>
    
         <form method='POST' action='https://getform.io/f/87e54070-874e-4a43-bb06-451af19c3286' className='flex flex-col max-w-[600px] w-full border-4 border-[#66FCF1] rounded-lg p-5 m-2 bg-[#1f2833]'>
             <div className='pb-8'>

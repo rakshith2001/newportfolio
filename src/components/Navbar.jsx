@@ -3,8 +3,10 @@ import { FaBars,FaTimes ,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 
 import {Link} from 'react-scroll'
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-const Navbar = () => {
+const Navbar = ({dark,setDark}) => {
+  
   
   const [nav,setNav] = useState(false);
 
@@ -17,10 +19,23 @@ const Navbar = () => {
   }
   return (
    
-    <div className='fixed w-full bg-[#0b0c10] h-[80px] flex justify-between items-center px-4 text-[#66fcf1]'>
+    <div className={dark? 'fixed w-full bg-[#ffffff] h-[80px] flex justify-between items-center px-4 text-[#66fc9f]':'fixed w-full bg-[#0b0c10] h-[80px] flex justify-between items-center px-4 text-[#66fcf1]'}>
       <div className='text-2xl'>
         <div>RAKSHITH</div>
       </div>
+
+
+      
+      <DarkModeSwitch className='m-auto'
+      style={{ marginBottom: '2rem' }}
+      checked={dark}
+      onChange={()=>setDark(!dark)}
+      moonColor='black'
+      sunColor='white'
+      size={20} />
+     
+
+    
 
   
       

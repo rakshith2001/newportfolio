@@ -1,9 +1,9 @@
 import techNotes from '../assets/projects/Tech-notes.png'
 import project2 from '../assets/projects/project2.png'
 
-const Work = () => {
+const Work = ({dark}) => {
   return (
-    <div name="work" className='w-full md:h-screen text-[#c5c6c7] bg-[#0b0c10]'>
+    <div name="work" className={dark?'w-full md:h-screen text-[#121314] bg-[#ffffff]':'w-full md:h-screen text-[#c5c6c7] bg-[#0b0c10]'}>
         <div className=" max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
 
           <div className='pb-8'>

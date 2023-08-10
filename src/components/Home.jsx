@@ -2,10 +2,10 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
 
-const Home = () => {
+const Home = ({dark}) => {
   return (
  
-    <div name='home' className='bg-[#0b0c10] w-full h-screen dark:bg-slate-50 '>
+    <div name='home' className={dark ?'bg-[#ffffff] w-full h-screen':'bg-[#0b0c10] w-full h-screen'}>
 
 
     <div className=' max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
